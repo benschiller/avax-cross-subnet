@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment
+.env
+.env.local
+
+# Foundry
+cache/
+out/
+broadcast/
+lib/
+
+# Hardhat / Truffle
+artifacts/
+cache_hardhat/
+typechain/
+typechain-types/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Demo outputs
+deployed.json
+deployments/
+recordings/
