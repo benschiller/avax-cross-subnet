@@ -7,7 +7,7 @@
 ## ACT 1: THE VILLAIN (0-15s) — "The Problem"
 **[VOICEOVER ONLY — no terminal yet]**
 
-> **NARRATOR:** "The SEC just warned: actively managed crypto vaults and lending pools may be securities. Pooled deposits. Discretionary managers. Headstands and backflips to avoid the law. But what if you didn't build a vault at all? What if you built deterministic, bilateral execution — where the rules are burned into the message before it ever crosses chains?"
+> **NARRATOR:** "The SEC has made one thing clear: DeFi pooled deposits and vaults with discretionary managers may be viewed as securities. But the real problem isn't regulation, it's trust. That's why we built a deterministic, bilateral trade execution engine for sovereign individuals on Avalanche."
 
 ---
 
@@ -31,7 +31,7 @@ Verifying L1 connectivity and contract deployments...
 ✓ All L1s reachable and contracts verified at deployed addresses.
 ```
 
-> **NARRATOR:** "Two sovereign Avalanche L1s. Both live. Different RPC endpoints. Different chain IDs. Every contract verified at its address. This isn't a shared chain — it's two separate chains coordinated natively."
+> **NARRATOR:** "Here is the setup. Two Avalanche L1s — different RPCs, different chain IDs, separate infrastructures."
 
 ### Beat 2: The Trade Executes (22-45s) — 💥 **WOW #2**
 **[TERMINAL: `npm run demo` — live output, show key moments]**
@@ -74,7 +74,7 @@ Executor mUSDC: 1000
 Demo completed successfully.
 ```
 
-> **NARRATOR:** "The Initiator broadcasts a deterministic order. The message crosses to the Settlement L1 via Avalanche ICM. The Settlement Messenger authenticates it. TradeEscrow locks 5 bps commission *instantly* and releases the trade amount to the Executor. The Executor swaps inside the slippage bound burned into the order. The Keeper triggers payout — but the commission *can only go to the initiator payout address*. The caller cannot redirect it. No pooled deposits. No discretionary manager. Just code."
+> **NARRATOR:** "Now the trade executes. The Initiator broadcasts an order to the Settlement L1 via Avalanche's native Interchain Messaging protocol, carried by the ICM relayer. The Settlement Messenger receives it, authenticates, and opens the escrow. TradeEscrow locks in commission for the Strategy provider and the remaining amount is immediately released to the Executor. The Executor performs the swap. Then, anyone can permissionlessly trigger the Keeper payout. The destination is immutable and no one can corrupt the flow."
 
 ### Beat 3: Cryptographic Proof (45-70s) — 💥 **WOW #3**
 **[TERMINAL: `npx tsx scripts/verify-demo.ts` — live output]**
@@ -132,7 +132,7 @@ Demo completed successfully.
 ║  ✅ VERIFICATION COMPLETE - Cross-subnet trade executed trustlessly  ║
 ```
 
-> **NARRATOR:** "Don't trust the demo output. Verify it yourself. Every transaction. Both chains. Cryptographic proof. The OrderSent on the Initiator L1 with its Teleporter Message ID. The OrderReceived on the Settlement L1 — same message, authenticated. TradeFunded locks commission. TradeExecuted enforces slippage. CommissionPaid — permissionless caller, but destination *immutable*."
+> **NARRATOR:** "And with massive implications for institutional trading, the cryptographic audit trail is critical. Every transaction hash, every block number, every gas value is visible on both chains."
 
 ---
 
@@ -141,11 +141,64 @@ Demo completed successfully.
 ### Beat 4: The Reveal (70-82s) — 💥 **WOW #4**
 **[TERMINAL: Freeze on final verification box — `✅ VERIFICATION COMPLETE - Cross-subnet trade executed trustlessly`]**
 
-> **NARRATOR:** "*Escrow is the enforcement layer*. Commission locked at open. Slippage enforced at close. Payout destination immutable. The Executor never holds the commission. The Keeper can't redirect it. The Initiator payout *must* receive it. No vault. No lending pool. No discretionary manager. Code as law."
+> **NARRATOR:** "Look at the final state. We just experienced trustless non-custodial trade execution between parties. No pooled deposits. No controlling manager."
 
 ### Beat 5: TADA! (82-90s) — 🎉 **TADA!**
 **[TERMINAL: Clean final frame — hold on the green checkmark box]**
 
-> **NARRATOR:** "Cross-subnet coordination. Deterministic. Non-custodial. Native Avalanche."
+> **NARRATOR:** "This is the power of cross-subnet coordination, built on Avalanche."
 > 
 > **[CUT TO: Repository URL on screen — github.com/.../avax-cross-subnet]**
+
+---
+
+## Production Notes
+
+| Element | Detail |
+|---------|--------|
+| **Recording** | 1080p minimum, terminal font size 16+, high contrast theme |
+| **Pacing** | Cut on action (keystrokes → output). No dead air. |
+| **Voiceover** | Record separately, sync to edits. Confident, technical but accessible. |
+| **Music** | Subtle tension in Act 1, building momentum Act 2, resolution Act 3 |
+| **Captions** | Include key commands and addresses for viewers to replicate |
+
+---
+
+## Quick Reference: Commands for Recording
+
+```bash
+# ACT 1 - Problem context (narration only, no commands needed)
+
+# ACT 2 - The Solution
+npm run bootstrap         # ~5s — MUST show live
+npm run demo              # ~30s — show key moments, not full wait
+npx tsx scripts/verify-demo.ts  # ~10s — THE verification moment
+
+# ACT 3 - Triumph (narration over verification output freeze-frame)
+```
+
+---
+
+## Alternative: 60-Second Cut (If Time Constrained)
+
+| Time | Content |
+|------|---------|
+| 0-10s | Problem: "Trust is the villain. Deterministic bilateral execution is the answer." |
+| 10-25s | Bootstrap + Demo (sped up) |
+| 25-45s | Live demo + verification script |
+| 45-55s | Invariant close-up: "Payout FIXED. Caller cannot redirect." |
+| 55-60s | TADA + Logo |
+
+---
+
+## Key Messages to Land
+
+1. **Native messaging** (Teleporter) ≠ bridges
+2. **Escrow = enforcement**, not trust
+3. **Permissionless but bounded** — keeper calls, destination fixed
+4. **Verifiable** — every tx on both chains, cryptographic proof
+5. **Production path** — documented in `docs/EXTENDING.md`
+
+---
+
+*Script v2.0 — Updated with consolidated continuous narrative. Ready to record.*
