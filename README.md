@@ -1,4 +1,4 @@
-# Cross-Subnet Order Coordinator
+# Cross-Subnet Trade Coordinator
 
 A minimal, reproducible demo of deterministic, non-custodial trade execution between two sovereign Avalanche L1s. No pooled deposits. No discretionary manager. Enforcement by escrow state, not trust — using native Avalanche Interchain Messaging (ICM / Teleporter).
 
@@ -39,6 +39,10 @@ This is a local-network demo with mock tokens and a mock DEX. It intentionally d
 - Production access controls, upgradeability, or formal auditing.
 
 These are documented in `docs/EXTENDING.md`.
+
+## Watch the demo
+
+[https://i.imgur.com/RzfCPWX.png](https://www.youtube.com/watch?v=Ch-xIe37oNs)
 
 ## Quick start
 
