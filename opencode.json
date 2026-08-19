@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "mbz-ifm": {
+      "name": "mbz-ifm",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://api.k2think.ai/v1",
+        "apiKey": "IFM-OyCJRQn57wmmFwWv"
+      },
+      "models": {
+        "MBZUAI-IFM/K2-Think-v2": {
+          "name": "K2-Think-v2",
+          "limit": {
+            "context": 262144,
+            "output": 131072
+          }
+        }
+      }
+    },
+    "hyperfusion": {
+      "name": "hyperfusion",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://api.hyperfusion.io/v1",
+        "apiKey": "sk-rm-E1neiSJ56mlvusDFiUw"
+      },
+      "models": {
+        "gonka/moonshotai/Kimi-K2.6": {
+          "name": "Kimi-K2.6",
+          "limit": {
+            "context": 131072,
+            "output": 16384
+          }
+        },
+        "MiniMaxAI/MiniMax-M2.7": {
+          "name": "MiniMax-M2.7",
+          "limit": {
+            "context": 197000,
+            "output": 197000
+          }
+        }
+      }
+    }
+  }
+}

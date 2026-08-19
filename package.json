@@ -1,16 +1,20 @@
 {
   "name": "cross-subnet-agent-coordinator",
   "version": "0.1.0",
-  "description": "Avalanche cross-subnet AI agent coordinator with escrow-enforced commission",
-  "main": "scripts/run-demo.sh",
+  "description": "Deterministic, non-custodial cross-subnet trade execution on Avalanche with escrow-enforced commission",
+  "main": "scripts/run-demo.ts",
   "scripts": {
     "build": "forge build",
     "test": "forge test",
     "test:trace": "forge test -vvv",
     "clean": "forge clean && rm -rf node_modules",
     "deploy:local": "bash scripts/deploy-local.sh",
+    "deploy:contracts": "tsx scripts/deploy-contracts.ts",
+    "relayer:config": "tsx scripts/generate-relayer-config.ts",
+    "relayer:start": "bash scripts/start-relayer.sh",
+    "relayer:stop": "bash scripts/stop-relayer.sh",
     "bootstrap": "tsx scripts/bootstrap.ts",
-    "demo": "bash scripts/run-demo.sh",
+    "demo": "tsx scripts/run-demo.ts",
     "lint:sol": "forge fmt --check"
   },
   "devDependencies": {

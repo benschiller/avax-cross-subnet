@@ -1,27 +1,28 @@
 {
-  "strategy": {
-    "rpcUrl": "http://127.0.0.1:9650/ext/bc/strategy/rpc",
+  "initiator": {
+    "name": "initiatorSubnet",
+    "rpcUrl": "http://127.0.0.1:9650/ext/bc/<initiator-blockchain-id>/rpc",
+    "wsUrl": "ws://127.0.0.1:9650/ext/bc/<initiator-blockchain-id>/ws",
     "chainId": 12345,
     "blockchainId": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "teleporterMessenger": "0x0000000000000000000000000000000000000000",
-    "strategyMessenger": "0x0000000000000000000000000000000000000000"
+    "blockchainIdCb58": "<initiator-blockchain-id-cb58>",
+    "subnetId": "<initiator-subnet-id>",
+    "teleporterMessenger": "0x253b2784c75e510dD0fF1da844684a1aC0aa5fcf",
+    "initiatorMessenger": "0x0000000000000000000000000000000000000000"
   },
-  "execution": {
-    "rpcUrl": "http://127.0.0.1:9650/ext/bc/execution/rpc",
+  "settlement": {
+    "name": "settlementSubnet",
+    "rpcUrl": "http://127.0.0.1:9650/ext/bc/<settlement-blockchain-id>/rpc",
+    "wsUrl": "ws://127.0.0.1:9650/ext/bc/<settlement-blockchain-id>/ws",
     "chainId": 67890,
     "blockchainId": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "teleporterMessenger": "0x0000000000000000000000000000000000000000",
-    "executionMessenger": "0x0000000000000000000000000000000000000000",
+    "blockchainIdCb58": "<settlement-blockchain-id-cb58>",
+    "subnetId": "<settlement-subnet-id>",
+    "teleporterMessenger": "0x253b2784c75e510dD0fF1da844684a1aC0aa5fcf",
+    "mockWAVAX": "0x0000000000000000000000000000000000000000",
+    "mockUSDC": "0x0000000000000000000000000000000000000000",
+    "mockDEX": "0x0000000000000000000000000000000000000000",
     "tradeEscrow": "0x0000000000000000000000000000000000000000",
-    "mockWavax": "0x0000000000000000000000000000000000000000",
-    "mockUsdc": "0x0000000000000000000000000000000000000000",
-    "mockDex": "0x0000000000000000000000000000000000000000"
-  },
-  "roles": {
-    "deployer": "0x0000000000000000000000000000000000000000",
-    "strategyAgent": "0x0000000000000000000000000000000000000000",
-    "executionAgent": "0x0000000000000000000000000000000000000000",
-    "keeper": "0x0000000000000000000000000000000000000000",
-    "strategyPayout": "0x0000000000000000000000000000000000000000"
+    "settlementMessenger": "0x0000000000000000000000000000000000000000"
   }
 }

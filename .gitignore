@@ -4,14 +4,17 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# Environment
+# Environment (never commit keys or RPC configs)
 .env
-.env.local
+.env.*
+!.env.example
 
-# Foundry
+# Foundry build artifacts
 cache/
 out/
 broadcast/
+
+# Git submodules are managed separately
 lib/
 
 # Hardhat / Truffle
@@ -35,7 +38,20 @@ Thumbs.db
 *.log
 logs/
 
-# Demo outputs
+# Demo / deployment outputs (contain local contract addresses and keys)
 deployed.json
 deployments/
 recordings/
+
+# Local relayer state (contains private key config)
+.icm-relayer-storage/
+.relayer.pid
+.keys/
+icm-relayer-config.json
+
+# Security: never commit credential files
+*.pem
+*.key
+*.p12
+*.secret
+secrets/
