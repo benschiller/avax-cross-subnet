@@ -42,7 +42,7 @@ These are documented in `docs/EXTENDING.md`.
 
 ## Watch the demo
 
-[https://i.imgur.com/RzfCPWX.png](https://www.youtube.com/watch?v=Ch-xIe37oNs)
+[![Watch the demo](https://i.imgur.com/GHk3vqa.png)](https://www.youtube.com/watch?v=Ch-xIe37oNs)
 
 ## Quick start
 
