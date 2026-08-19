@@ -23,7 +23,7 @@ The Settlement Messenger receives it, authenticates, and opens the escrow. Trade
 
 The Executor performs the swap. Then, anyone can permissionlessly trigger the Keeper payout. The destination is immutable and no one can corrupt the flow.
 
-And with massive implications for instituitional trading, the cryptographic audit trail is critical.
+And with massive implications for institutional trading, the cryptographic audit trail is critical.
 
 Every transaction hash, every block number, every gas value is visible on both chains.
 
